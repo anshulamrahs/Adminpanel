@@ -37,7 +37,7 @@ const Chart = () => {
             
           </defs>
           <XAxis dataKey="name" stroke="gray"/>
-          <CartesianGrid strokeDasharray="3 3" />
+          <CartesianGrid strokeDasharray="3 3" className="chartGrid"/>
           <Tooltip />
           <Area
             type="monotone"
