@@ -12,12 +12,15 @@ import LogoDevIcon from '@mui/icons-material/LogoDev';
 import SettingsApplicationsIcon from '@mui/icons-material/SettingsApplications';
 import PersonIcon from '@mui/icons-material/Person';
 import LogoutIcon from '@mui/icons-material/Logout';
+import { Link } from 'react-router-dom';
 
 const Sidebar = () => {
   return (
     <div className='sidebar'>
         <div className="top">
+            <Link to={"/"} style={{textDecoration: "none"}}>
             <span className="logo">Waveyhigh</span>
+            </Link>
         </div>
         <hr/>
         <div className="center">
@@ -28,14 +31,19 @@ const Sidebar = () => {
                    <span className="dashboard">Dashboard</span>
                 </li>
                 <p className='title'>LISTS</p>
+                <Link to={"/users"} style={{textDecoration: "none"}}>
                 <li>
                     <Person3Icon className="icon"/>
                     <span>Users</span>
                 </li>
+                </Link>
+                <Link to={"/products"} style={{textDecoration: "none"}}>
                 <li>
                     <InventoryIcon className="icon"/>
                     <span>Products</span>
                 </li>
+
+                </Link>
                 <li>
                     <WorkOutlineIcon className="icon"/>
                     <span>Orders</span>
